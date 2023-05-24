@@ -1,0 +1,178 @@
+@use "./components/navigation";
+@import "./utils/variables";
+@import "./components/main_index";
+@import "./components/main_portfolio";
+@import "./components/main_index_modal";
+body {
+  font-family: $default_font_family;
+  color: $default_font_color;
+  background-color: $main_background;
+  width: $max_page_size;
+  margin: 0px;
+}
+
+/*Układ stron*/
+.main-page {
+  width: $max_page_size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  .main-container {
+    max-width: $container_size;
+    width: $max_page_size;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    // @include tablet {
+    //   max-width: 768px;
+    // }
+    // @include desktop {
+    //   max-width: 1200px;
+    // }
+  }
+}
+
+/*Styl stopki*/
+.f-page {
+  background-color: $f-background;
+  width: $max_page_size;
+  height: 252px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-container {
+  width: $container_size;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.f-grid {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  list-style: none;
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    &__effect {
+      color: #2196f3;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #2196f3;
+    }
+  }
+
+  &__location {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+  }
+  &__contact {
+    text-decoration: none;
+    color: #757575;
+  }
+}
+.f-section__socials {
+  padding: 0px auto;
+  display: flex;
+  flex-direction: column;
+  .f-socials__header {
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .f-socials__box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    &__item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__item svg {
+      fill: #fff;
+    }
+    &__item:hover,
+    &__item:active {
+      background-color: $action_background;
+      border-radius: 50%;
+    }
+  }
+}
+.f-form__header {
+  padding: 10px 10px 20px 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.f-wrapper__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  .f-form__input {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-family: $default_font_family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+    background-color: $f-background;
+    width: 358px;
+    height: 50px;
+  }
+  .f-form__button {
+    padding: 10px 0 10px 0;
+    width: 200px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    background: $action_background;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+  }
+}

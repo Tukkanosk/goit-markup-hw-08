@@ -1,0 +1,116 @@
+@import "../utils/variables";
+/*Styl nagłówka*/
+.menu-page {
+  width: $max_page_size;
+  border: 1px solid #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  gap: 93px;
+  .menu-logo {
+    font-family: $secondary_font_family;
+    color: $default_font_color;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    &:inherit {
+      color: inherit;
+    }
+    &:hover,
+    &:focus {
+      color: $action_color;
+    }
+    &__effect {
+      color: $action_color;
+    }
+  }
+  .menu-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 46px;
+    list-style: none;
+    padding-left: 0;
+    &__item {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }
+      &:hover,
+      &:focus {
+        color: $action_color;
+      }
+    }
+    &__item__active {
+      position: relative;
+    }
+    &__item__active::after {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $action_background;
+      border-radius: 2px;
+      content: "";
+      bottom: -33px;
+      left: 0px;
+    }
+  }
+  .menu-contact {
+    display: flex;
+    gap: 30px;
+    padding-left: 295px;
+    .contact {
+      text-decoration: none;
+      color: #757575;
+      &:hover {
+        color: $action_color;
+      }
+      & svg {
+        fill: $action_color;
+      }
+    }
+  }
+}
+// .banner {
+//   text-align: center;
+//   color: #ffffff;
+//   background-image: radial-gradient(
+//       circle at center,
+//       #2f303a66 50%,
+//       #2f303a66 100%
+//     ),
+//     url("../images/bckgrnd.jpg");
+//   background-size: cover;
+//   background-position: center;
+//   padding: 200px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 30px;
+//   &-header {
+//     margin: 0px;
+//     width: 696px;
+//     font-family: $default_font_family;
+//     font-weight: 900;
+//     font-size: 44px;
+//     line-height: 60px;
+//   }
+//   &-button {
+//     width: 200px;
+//     background-color: $action_background;
+//     color: $secondary_font_color;
+//     font-size: 16px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     border: none;
+//     border-radius: 4px;
+//     padding: 0px;
+//     cursor: pointer;
+//   }
+// }

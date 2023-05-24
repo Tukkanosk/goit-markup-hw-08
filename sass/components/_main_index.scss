@@ -1,0 +1,204 @@
+@import "../utils/variables";
+.banner {
+  text-align: center;
+  color: #ffffff;
+  background-image: radial-gradient(
+      circle at center,
+      #2f303a66 50%,
+      #2f303a66 100%
+    ),
+    url("/images/bckgrnd1x.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 118px 0 118px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 480px;
+  &-header {
+    margin: 0px;
+    width: 365px;
+    font-family: $default_font_family;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+  }
+  &-button {
+    width: 200px;
+    background-color: $action_background;
+    color: $secondary_font_color;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    padding: 0px;
+    cursor: pointer;
+  }
+}
+.main-section__header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main-grid {
+  width: $container_size;
+  padding: 60px 0 60px 15px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  &__frame {
+    max-width: calc($container_size - 2 * 15px);
+    min-width: 320px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    height: 70px;
+    width: 65px;
+  }
+  &__description {
+    font-weight: 400;
+    color: #757575;
+    line-height: 24px;
+  }
+  &__header {
+    text-align: center;
+  }
+}
+.main-section__fix {
+  padding: 0 0 94px 0;
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.engagement-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  &__wall p {
+    background: rgba(47, 48, 58, 0.8);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 88px;
+  }
+}
+.main-section__crew {
+  background: #f5f4fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 92px 92px 0;
+}
+.crew-grid {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 0;
+  padding-left: 62px;
+  &__frame {
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 1px;
+    text-align: center;
+    &__wrapper {
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    &__occupation {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #757575;
+    }
+  }
+  &__SM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    & svg {
+      fill: #afb1b8;
+    }
+    &:hover,
+    &:active {
+      background-color: #2196f3;
+      border-radius: 50%;
+    }
+    &:hover svg,
+    &:active svg {
+      fill: #fff;
+    }
+  }
+}
+.clients-grid {
+  padding: 0 92px 92px 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  &__logo {
+    padding: 16px 32px 16px 32px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+  }
+  & svg {
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+  }
+  &__logo:hover svg,
+  &__logo:active svg,
+  &__logo:focus-within svg {
+    fill: $action_color;
+  }
+  &__logo:hover,
+  &__logo:active,
+  &__logo:focus-within {
+    border-color: $action_background;
+  }
+}
