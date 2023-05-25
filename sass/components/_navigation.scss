@@ -1,14 +1,19 @@
 @import "../utils/variables";
 /*Styl nagłówka*/
 .menu-page {
-  width: $max_page_size;
+  max-width: $max_page_size;
+  min-width: $container_size;
   border: 1px solid #ececec;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   gap: 93px;
+  &__list {
+    padding-right: 15px;
+  }
   .menu-logo {
+    padding-left: 15px;
     font-family: $secondary_font_family;
     color: $default_font_color;
     font-size: 26px;
@@ -64,7 +69,7 @@
   .menu-contact {
     display: flex;
     gap: 30px;
-    padding-left: 295px;
+    padding: 0;
     .contact {
       text-decoration: none;
       color: #757575;

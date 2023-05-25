@@ -7,15 +7,15 @@ body {
   font-family: $default_font_family;
   color: $default_font_color;
   background-color: $main_background;
-  width: $max_page_size;
   margin: 0px;
 }
 
 /*Układ stron*/
 .main-page {
-  width: $max_page_size;
+  max-width: $max_page_size;
+  min-width: $container_size;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-color: #fff;
   .main-container {
@@ -37,24 +37,29 @@ body {
 /*Styl stopki*/
 .f-page {
   background-color: $f-background;
-  width: $max_page_size;
-  height: 252px;
+  max-width: $max_page_size;
+  min-width: $container_size;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .f-container {
-  width: $container_size;
+  min-width: $container_size;
+  max-width: $max_page_size;
   margin: 0px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 70px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
 }
 .f-grid {
+  padding: 60px 0 0 0;
   margin: 0px;
-  padding: 0px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 9px;
   list-style: none;
   &__logo {
@@ -92,6 +97,7 @@ body {
   padding: 0px auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   .f-socials__header {
     color: #fff;
     font-size: 14px;
@@ -129,17 +135,17 @@ body {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 570px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 .f-wrapper__form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
+  padding-bottom: 60px;
 
   .f-form__input {
     box-sizing: border-box;

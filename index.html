@@ -19,6 +19,7 @@
   <header>
     <!--
 .menu-page
+  .menu-page__list
   .menu-logo
       .menu-logo__effect
   .menu-grid
@@ -30,7 +31,7 @@
     <section class="menu-page">
       
       <a class="menu-logo" href=""><span class="menu-logo__effect">Web</span>Studio</a>
-      <ul class="menu-grid">
+      <!-- <ul class="menu-grid">
         <li><a class="menu-grid__item menu-grid__item__active" href="./index.html">Agencja</a></li>
         <li><a class="menu-grid__item" href="./portfolio.html">Portfolio</a></li>
         <li><a class="menu-grid__item" href="">Kontakt</a></li>
@@ -45,7 +46,10 @@
           <use href="./images/symbol-defs.svg#icon-smartphone"></use>
         </svg> +48 111 111 111</a></div
       >
-      
+       -->
+      <svg class="menu-page__list" width="24px" height="16px">
+        <use href="./images/icons.svg#icon-menu-page__list"></use>
+      </svg>
     </section>
   </header>
   <main>
@@ -178,10 +182,10 @@
         <ul class="crew-grid">
           <li class="crew-grid__frame">
             <img
-              src="./images/johndoe1.jpg"
               alt="Ilustracja mężczyzny z krótkimi jasno-brązowymi włosami i brodą, w okularach i czerwonej koszuli."
-              width="270"
-              height="260"
+              srcset="./images/johndoe1x1.jpg 480w,
+              ./images/johndoe1x2.jpg 768,
+              ./images/johndoe1.jpg 1200"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Product Designer</p>
@@ -212,8 +216,9 @@
             <img
               src="./images/johndoe2.jpg"
               alt="Ilustracja kobiety z długimi blond włosami, w okularach, w czarnym żakiecie i białej koszuli."
-              width="270"
-              height="260"
+              srcset="./images/johndoe2x1.jpg 480w,
+              ./images/johndoe2x2.jpg 768,
+              ./images/johndoe2.jpg 1200"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Frontend Developer</p>
@@ -244,8 +249,9 @@
             <img
               src="./images/johndoe3.jpg"
               alt="Ilustracja mężczyzny z krótkimi brązowymi włosami i zarostem, w jasno-błękitnej koszuli."
-              width="270"
-              height="260"
+              srcset="./images/johndoe3x1.jpg 480w,
+              ./images/johndoe3x2.jpg 768,
+              ./images/johndoe3.jpg 1200"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Marketing</p>
@@ -276,8 +282,9 @@
             <img
               src="./images/johndoe4.jpg"
               alt="Ilustracja mężczyzny z krótkimi ciemno-brązowymi włosami i brodą, w okularach i czarnej koszulce."
-              width="270"
-              height="260"
+              srcset="./images/johndoe4x1.jpg 480w,
+              ./images/johndoe4x2.jpg 768w,
+              ./images/johndoe4.jpg 1200w"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">UI Designer</p>
@@ -306,9 +313,8 @@
           </li>
         </ul>
       </div>
-      <div class="main-container">
-        <h2 class="main-section__header">Nasi klienci</h2>
         <div class="main-section">
+          <h2 class="main-section__header">Nasi klienci</h2>
           <ul class="clients-grid">
            <li class="clients-grid__logo"><a class="clients-grid__link" href="#"><svg >
             <use href="./images/symbol-defs.svg#icon-Logo"></use>
@@ -329,7 +335,6 @@
             <use href="./images/symbol-defs.svg#icon-Logo-6"></use>
            </svg></a></li>
           </ul>
-      </div>
     </div>
   </div>
   </main>
