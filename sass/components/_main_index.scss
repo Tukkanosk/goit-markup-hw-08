@@ -7,7 +7,7 @@
       #2f303a66 50%,
       #2f303a66 100%
     ),
-    url("/images/bckgrnd@1x.jpg");
+    url("./images/bckgrnd@1x.jpg");
   background-size: cover;
   background-position: center;
   padding: 118px 0 118px 0;
@@ -147,6 +147,10 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    img {
+      min-width: 100%;
+      height: auto;
+    }
     &__wrapper {
       padding-bottom: 30px;
       display: flex;
