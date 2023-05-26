@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/main.min.css">
   <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
 </head>
-<body>
+<body style>
   <header>
     <!--
 .menu-page
@@ -27,10 +27,8 @@
       .menu-grid__item__active
   .menu-contact'
       .contact
+  .menu-page__mobile-menu
   -->
-    <section class="menu-page">
-      
-      <a class="menu-logo" href=""><span class="menu-logo__effect">Web</span>Studio</a>
       <!-- <ul class="menu-grid">
         <li><a class="menu-grid__item menu-grid__item__active" href="./index.html">Agencja</a></li>
         <li><a class="menu-grid__item" href="./portfolio.html">Portfolio</a></li>
@@ -41,15 +39,16 @@
           <use href="./images/symbol-defs.svg#icon-envelope
         "></use>
         </svg> info@example.com</a>
-       
         <a class="contact" href="tel:+48111111111"><svg width="10" height="16">
           <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-        </svg> +48 111 111 111</a></div
-      >
-       -->
-      <svg class="menu-page__list" width="24px" height="16px">
-        <use href="./images/icons.svg#icon-menu-page__list"></use>
-      </svg>
+        </svg> +48 111 111 111</a></div>-->
+       <section class="menu-page">  
+      <a class="menu-logo" href=""><span class="menu-logo__effect">Web</span>Studio</a>
+       <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-page__list" width="24px" height="16px">
+          <use href="./images/icons.svg#icon-menu-page__list"></use>
+        </svg>
+      </button>    
     </section>
   </header>
   <main>
@@ -437,5 +436,41 @@
       <button class="close-btn" type="button" data-modal-close>X</button></div>
   </div>
   <script src="./js/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+  <div class="menu-container js-menu-container" id="mobile-menu"> 
+    <!-- .menu-container
+            .menu-toggle
+                .menu-toggle__icon
+            .mobile-grid
+                .mobile-grid__item
+                .mobile-grid__item__active
+            .mobile-contact
+                .contact__item
+    -->
+    <span class="menu-container__fix"><button class="menu-toggle js-close-menu">
+      <svg class="menu-toggle__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-close_24px"></use>
+      </svg>
+    </button></span>
+    <ul class="mobile-grid">
+      <li><a class="mobile-grid__item menu-grid__item__active" href="./index.html">Agencja</a></li>
+      <li><a class="mobile-grid__item" href="./portfolio.html">Portfolio</a></li>
+      <li><a class="mobile-grid__item" href="">Kontakt</a></li>
+      </ul>
+      <div class="mobile-contact">
+        <a class="mobile-contact__item" href="tel:+48111111111"> +48 111 111 111</a>
+        <a class="mobile-contact__item mail" href="mailto:info@example.com">info@example.com</a>
+        <ul class="mobile-contact__socials">
+          <li class="mobile-contact__socials__item">Instagram</li>
+          <li class="mobile-contact__socials__line">|</li>
+          <li class="mobile-contact__socials__item">Twitter</li>
+          <li class="mobile-contact__socials__line">|</li>
+          <li class="mobile-contact__socials__item">Facebook</li>
+          <li class="mobile-contact__socials__line">|</li>
+          <li class="mobile-contact__socials__item">Linkedin</li>
+        </ul>
+      </div>
+  </div>
+  <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
