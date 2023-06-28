@@ -1,0 +1,235 @@
+/*Okno modalne*/
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  min-width: $container_size;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  scale: 1;
+  opacity: 1;
+  transition: transform, scale, opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  z-index: 1;
+  min-width: calc($container_size - 2 * 15px);
+  // height:581px; dla desktopu
+  height: 609px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  animation: modal-open 3s forwards;
+}
+@keyframes modal-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  scale: 1;
+  opacity: 0;
+  transform: (50%, 50%);
+  transition: transform, scale, opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*Formularz w oknie modalnym*/
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: rgba(33, 33, 33, 0.2);
+}
+.h-form {
+  padding: 40px 40px 12px 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  width: 370px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 40px;
+}
+.form-box-input {
+  padding: 0 0 0 42px;
+  width: 380px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+.form-icon1,
+.form-icon2,
+.form-icon3 {
+  position: absolute;
+}
+.form-box-input:focus + svg {
+  fill: #2196f3;
+}
+
+.form-icon1 {
+  top: 120px;
+  left: 11%;
+}
+.form-icon2 {
+  left: 11%;
+  top: 193px;
+}
+.form-icon3 {
+  left: 11%;
+  top: 265px;
+}
+
+.form-box textarea {
+  padding: 0 0 0 15px;
+  width: 433px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-box-input:focus,
+.form-box textarea:focus {
+  border-color: #2196f3;
+}
+.permission-input {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  margin-bottom: 30px;
+}
+.form-box label {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #757575;
+}
+.f-order-btn {
+  padding: 0px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.permission-label {
+  position: relative;
+  cursor: pointer;
+}
+.permission-label::before {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E");
+  bottom: 5%;
+  left: -7%;
+  width: 16px;
+  height: 15px;
+}
+.permission-input:checked + .permission-label::before {
+  background-color: #2196f3;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 2px;
+}
+.txt-fix {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+/* Formularz w stopce do newslettera*/
+.form-n-fix {
+  display: flex;
+  gap: 12px;
+}
+.fix-header {
+  padding: 10px 10px 20px 10px;
+}
+.form-footer-box button {
+  padding: 10px 0 10px 0;
+  width: 200px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.form-footer-box input[type="text"] {
+  box-sizing: border-box;
+  background-color: #2f303a;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+form[name="newsletter"] label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
