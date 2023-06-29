@@ -1,4 +1,4 @@
-@use "./components/navigation";
+@import "./components/navigation";
 @import "./utils/variables";
 @import "./components/main_index";
 @import "./components/main_portfolio";
@@ -7,52 +7,47 @@ body {
   font-family: $default_font_family;
   color: $default_font_color;
   background-color: $main_background;
-  margin: 0px;
+  margin: 0;
 }
-
 /*Układ stron*/
 .main-page {
-  max-width: $max_page_size;
   min-width: $container_size;
   display: flex;
+  flex-direction: column;
   justify-content: left;
   align-items: center;
   background-color: #fff;
-  .main-container {
-    max-width: $container_size;
-    width: $max_page_size;
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px;
-    // @include tablet {
-    //   max-width: 768px;
-    // }
-    // @include desktop {
-    //   max-width: 1200px;
-    // }
-  }
 }
 
 /*Styl stopki*/
 .f-page {
   background-color: $f-background;
-  max-width: $max_page_size;
   min-width: $container_size;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 }
 .f-container {
   min-width: $container_size;
-  max-width: $max_page_size;
   margin: 0px;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  @media screen and (min-width: 768px) {
+    min-width: $container_size__t;
+    flex-wrap: wrap;
+    flex-direction: unset;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: $container_size__pc;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .f-grid {
   padding: 60px 0 0 0;
@@ -128,6 +123,11 @@ body {
     }
   }
 }
+.f-section__form {
+  @media screen and (min-width: 1200px) {
+    align-items: normal;
+  }
+}
 .f-form__header {
   padding: 10px 10px 20px 10px;
   color: #fff;
@@ -145,8 +145,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-bottom: 60px;
-
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: unset;
+  }
   .f-form__input {
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.3);

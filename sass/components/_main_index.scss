@@ -7,7 +7,7 @@
       #2f303a66 50%,
       #2f303a66 100%
     ),
-    url("./images/bckgrnd@1x.jpg");
+    url("/images/bckgrnd.jpg");
   background-size: cover;
   background-position: center;
   padding: 118px 0 118px 0;
@@ -16,7 +16,7 @@
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  width: $container_size;
+  min-width: $container_size;
   &-header {
     margin: 0px;
     width: 365px;
@@ -36,9 +36,16 @@
     padding: 0px;
     cursor: pointer;
   }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    background-image: radial-gradient(
+        circle at center,
+        #2f303a66 50%,
+        #2f303a66 100%
+      ),
+      url("/images/bckgrnd@2x.jpg");
+  }
 }
 .main-section {
-  min-width: $container_size;
   &__header {
     font-size: 36px;
     font-weight: 700;
@@ -47,11 +54,20 @@
     text-align: center;
     margin-bottom: 50px;
   }
+  @media screen and (min-width: 768px) {
+    min-width: calc($container_size__t - 2 * 15px);
+    max-width: 100vp;
+  }
+}
+.only-pc-screen {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 .main-grid {
-  width: $container_size;
   padding: 60px 0 60px 15px;
-  margin: 0px;
+  margin: auto;
+  width: 100vp;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -64,7 +80,6 @@
   gap: 30px;
   &__frame {
     max-width: calc($container_size - 2 * 15px);
-    min-width: 320px;
     height: 120px;
     background: #f5f4fa;
     border-radius: 4px;
@@ -75,7 +90,7 @@
   }
   &__icon {
     height: 70px;
-    width: 65px;
+    width: 70px;
   }
   &__description {
     font-weight: 400;
@@ -85,7 +100,26 @@
   &__header {
     text-align: center;
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset;
+    &__header {
+      text-align: left;
+    }
+    &__frame,
+    &__wrapper {
+      max-width: calc($container_size__t / 2 - 2 * 15px);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__frame,
+    &__wrapper {
+      width: 270px;
+    }
+  }
 }
+
 .main-section__fix {
   padding: 0 0 94px 0;
   &__header {
@@ -121,27 +155,17 @@
   }
 }
 .main-section__crew {
-  max-width: $max_page_size;
   min-width: $container_size;
   width: 100%;
   background: #f5f4fa;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
+  display: block;
   padding: 0 0 92px 0;
 }
 .crew-grid {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   margin: 0;
   padding: 0;
+  list-style: none;
   &__frame {
-    min-width: calc($container_size - 2 * 15px);
     background: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -185,6 +209,11 @@
     }
   }
 }
+.clients-section {
+  min-width: $container_size;
+  margin: 0;
+  padding-bottom: 60px;
+}
 .clients-grid {
   padding: 0;
   display: flex;
@@ -195,8 +224,10 @@
   gap: 30px;
   &__logo {
     min-width: calc($container_size / 2 - 2 * 16px);
+    height: 92px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #afb1b8;
     border-radius: 4px;
   }

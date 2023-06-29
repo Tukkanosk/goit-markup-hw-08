@@ -16,20 +16,9 @@
   <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
 </head>
 <body style>
-  <header>
-    <!--
-.menu-page
-  .menu-page__list
-  .menu-logo
-      .menu-logo__effect
-  .menu-grid
-      .menu-grid__item
-      .menu-grid__item__active
-  .menu-contact'
-      .contact
-  .menu-page__mobile-menu
-  -->
-      <!-- <ul class="menu-grid">
+  <header class="menu-page">
+    <a class="menu-logo" href=""><span class="menu-logo__effect">Web</span>Studio</a>
+      <ul class="menu-grid">
         <li><a class="menu-grid__item menu-grid__item__active" href="./index.html">Agencja</a></li>
         <li><a class="menu-grid__item" href="./portfolio.html">Portfolio</a></li>
         <li><a class="menu-grid__item" href="">Kontakt</a></li>
@@ -41,15 +30,13 @@
         </svg> info@example.com</a>
         <a class="contact" href="tel:+48111111111"><svg width="10" height="16">
           <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-        </svg> +48 111 111 111</a></div>-->
-       <section class="menu-page">  
-      <a class="menu-logo" href=""><span class="menu-logo__effect">Web</span>Studio</a>
+        </svg> +48 111 111 111</a>
+      </div>
        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="menu-page__list" width="24px" height="16px">
           <use href="./images/icons.svg#icon-menu-page__list"></use>
         </svg>
       </button>    
-    </section>
   </header>
   <main>
     <section class="banner">
@@ -59,7 +46,7 @@
     .banner-button
 
   -->
-      <h1 class="banner-header">EFEKTYWNE ROZWIĄZANIA </br> DLA WASZEGO BIZNESU</h1>
+      <h1 class="banner-header">EFEKTYWNE ROZWIĄZANIA <br></br> DLA WASZEGO BIZNESU</h1>
       <button type="button" class="banner-button" data-modal-open><p>Zamów usługe</p></button>
     </section>
     <div class="main-page">
@@ -88,52 +75,52 @@
                   .clients-grid__logo
                   .clients-grid__link
     -->
-    <div class="main-container">
       <section class="main-section">
         <ul class="main-grid">
           <li>
             <div class="main-grid__frame"><svg class="main-grid__icon">
               <use href="./images/symbol-defs.svg#icon-antenna-1"></use>
             </svg></div>
+            <div class="main-grid__wrapper">
             <h3 class="main-grid__header">LOREM IPSUM</h3>
             <p class="main-grid__description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
               arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
+            </p></div>
           </li>
           <li>
             <div class="main-grid__frame"><svg class="main-grid__icon">
               <use href="./images/symbol-defs.svg#icon-astronaut-1"></use>
-            </svg></div>
+            </svg></div><div class="main-grid__wrapper">
             <h3 class="main-grid__header">LOREM IPSUM</h3>
             <p class="main-grid__description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
               arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
+            </p></div>
           </li>
           <li>
             <div class="main-grid__frame"><svg class="main-grid__icon">
               <use href="./images/symbol-defs.svg#icon-clock-1"></use>
-            </svg></div>
+            </svg></div><div class="main-grid__wrapper">
             <h3 class="main-grid__header">LOREM IPSUM</h3>
             <p class="main-grid__description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
               arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
+            </p></div>
           </li>
           <li>
             <div class="main-grid__frame"><svg class="main-grid__icon">
               <use href="./images/symbol-defs.svg#icon-diagram-1"></use>
-            </svg></div>
+            </svg></div><div class="main-grid__wrapper">
             <h3 class="main-grid__header">LOREM IPSUM</h3>
             <p class="main-grid__description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
               arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
+            </p></div>
           </li>
         </ul>
         </section>
-        <!-- <section class="main-section">
+        <section class="main-section only-pc-screen">
         <h2 class="main-section__fix__header">Czym się zajmujemy</h2>
         <ul class="engagement-grid">
           <li>
@@ -173,18 +160,20 @@
             </div>
           </li>
         </ul>
-      </section> -->
-    </div>
+      </section>
+    
   </div>
       <div class="main-section__crew">
         <h2 class="main-section__header">Nasz zespół</h2>
         <ul class="crew-grid">
           <li class="crew-grid__frame">
             <img
+              src="./images/johndoe1.jpg"
               alt="Ilustracja mężczyzny z krótkimi jasno-brązowymi włosami i brodą, w okularach i czerwonej koszuli."
-              srcset="./images/johndoe1x1.jpg 480w,
-              ./images/johndoe1x2.jpg 768,
-              ./images/johndoe1.jpg 1200"
+              srcset="./images/johndoe1.jpg 480w,
+              ./images/johndoe1x1.jpg 768w,
+              ./images/johndoe1x2.jpg 1200w"
+               sizes="(min-width: 320px) 450px, (min-width: 768px) 354px"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Product Designer</p>
@@ -216,8 +205,8 @@
               src="./images/johndoe2.jpg"
               alt="Ilustracja kobiety z długimi blond włosami, w okularach, w czarnym żakiecie i białej koszuli."
               srcset="./images/johndoe2x1.jpg 480w,
-              ./images/johndoe2x2.jpg 768,
-              ./images/johndoe2.jpg 1200"
+              ./images/johndoe2x2.jpg 768w,
+              ./images/johndoe2.jpg 1200w" sizes="(min-width: 320px) 480px, (min-width: 768px) 768px, 100vw"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Frontend Developer</p>
@@ -249,8 +238,8 @@
               src="./images/johndoe3.jpg"
               alt="Ilustracja mężczyzny z krótkimi brązowymi włosami i zarostem, w jasno-błękitnej koszuli."
               srcset="./images/johndoe3x1.jpg 480w,
-              ./images/johndoe3x2.jpg 768,
-              ./images/johndoe3.jpg 1200"
+              ./images/johndoe3x2.jpg 768w,
+              ./images/johndoe3.jpg 1200w" sizes="(min-width: 320px) 480px, (min-width: 768px) 768px, 100vw"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">Marketing</p>
@@ -283,7 +272,7 @@
               alt="Ilustracja mężczyzny z krótkimi ciemno-brązowymi włosami i brodą, w okularach i czarnej koszulce."
               srcset="./images/johndoe4x1.jpg 480w,
               ./images/johndoe4x2.jpg 768w,
-              ./images/johndoe4.jpg 1200w"
+              ./images/johndoe4.jpg 1200w"  sizes="(min-width: 320px) 480px, (min-width: 768px) 768px, 100vw"
             />
             <h3>John Doe</h3>
             <p class="crew-grid__frame__occupation">UI Designer</p>
@@ -312,7 +301,7 @@
           </li>
         </ul>
       </div>
-        <div class="main-section">
+        <div class="clients-section">
           <h2 class="main-section__header">Nasi klienci</h2>
           <ul class="clients-grid">
            <li class="clients-grid__logo"><a class="clients-grid__link" href="#"><svg >
@@ -335,7 +324,6 @@
            </svg></a></li>
           </ul>
     </div>
-  </div>
   </main>
   <footer>
    <!-- 
@@ -396,7 +384,7 @@
         </svg>
       </a>
     </span></div>
-      <form name="newsletter" autocomplete="off">
+      <form class="f-section__form" name="newsletter" autocomplete="off">
         <label class="f-form__header" for="user-permission-newsletter">Zapisz się do newslettera</label>
         <div class="f-wrapper__form">
           <input class="f-form__input" type="text" name="newsletter" id="user-permission-newsletter" placeholder="E-mail"/>
@@ -418,7 +406,7 @@
              <input class="form-box-input" type="text" name="name" id="user-name"/>
            <svg class="form-icon1" width="18" height="18"><use href="./images/symbol-defs.svg#icon-person-black-18dp-1"></use></svg>
              <label for="user-phone">Telefon</label>
-              <input class="form-box-input" type="phone" name="phone" id="user-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+              <input class="form-box-input" type="tel" name="phone" id="user-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
               <svg class="form-icon2" width="18" height="18"><use href="./images/symbol-defs.svg#icon-phone-black-18dp-1"></use></svg>
              <label for="user-email">Email</label>             
               <input class="form-box-input" type="email" name="email" id="user-email"/>
@@ -427,7 +415,7 @@
              <textarea name="user-comentary" id="comentary" rows="10" placeholder="Wprowadź tekst"></textarea>
             </div>
              <div class="permission-box">
-              <input type="checkbox" class="permission-input" name="permission" id="user-permission" chcecked required>
+              <input type="checkbox" class="permission-input" name="permission" id="user-permission" checked required>
               <label  class="txt-fix permission-label" for="user-permission">Oświadczam iż akceptuję <a href="" class="name-logo-effect-f">Regulamin</a> i <a href="" class="name-logo-effect-f">Politykę Prywatności.</a></label>
               <button type="submit" class="f-order-btn">Wyślij
               </button>

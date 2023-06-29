@@ -1,13 +1,12 @@
 @import "../utils/variables";
 /*Styl nagłówka*/
 .menu-page {
-  max-width: $max_page_size;
-  min-width: $container_size;
   border: 1px solid #ececec;
+  height: 80px;
+  min-width: $container_size;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
   gap: 93px;
   &__list {
     padding-right: 15px;
@@ -34,41 +33,46 @@
   }
   .menu-grid {
     display: none;
-    list-style: none;
-    padding-left: 0;
-    &__item {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      &:visited {
-        color: inherit;
+    @media screen and (min-width: 481px) {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      padding-left: 0;
+      list-style: none;
+      &__item {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        &:visited {
+          color: inherit;
+        }
+        &:hover,
+        &:focus {
+          color: $action_color;
+        }
       }
-      &:hover,
-      &:focus {
-        color: $action_color;
+      &__item__active {
+        position: relative;
       }
-    }
-    &__item__active {
-      position: relative;
-    }
-    &__item__active::after {
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: $action_background;
-      border-radius: 2px;
-      content: "";
-      bottom: -33px;
-      left: 0px;
+      &__item__active::after {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: $action_background;
+        border-radius: 2px;
+        content: "";
+        bottom: -33px;
+        left: 0px;
+      }
     }
   }
   .menu-contact {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 0;
+    gap: 10px;
+    padding-right: 15px;
     .contact {
       text-decoration: none;
       color: #757575;
@@ -76,8 +80,18 @@
         color: $action_color;
       }
       & svg {
+        fill: $secondary_svg_color;
+      }
+      & svg:hover {
         fill: $action_color;
       }
+    }
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      gap: 50px;
     }
   }
 }
@@ -100,7 +114,7 @@
     justify-content: flex-end;
     padding: 20px 40px 0 20px;
   }
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 480px) {
     display: none;
   }
 }
@@ -111,7 +125,6 @@
   margin: 0;
   gap: 32px;
   list-style: none;
-
   &__item {
     font-weight: 500;
     font-size: 40px;
@@ -180,7 +193,7 @@
   border: none;
   outline: none;
   color: $default_font_color;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
   &:hover svg,
@@ -188,40 +201,3 @@
     fill: $action_background;
   }
 }
-// .banner {
-//   text-align: center;
-//   color: #ffffff;
-//   background-image: radial-gradient(
-//       circle at center,
-//       #2f303a66 50%,
-//       #2f303a66 100%
-//     ),
-//     url("../images/bckgrnd.jpg");
-//   background-size: cover;
-//   background-position: center;
-//   padding: 200px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   gap: 30px;
-//   &-header {
-//     margin: 0px;
-//     width: 696px;
-//     font-family: $default_font_family;
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 60px;
-//   }
-//   &-button {
-//     width: 200px;
-//     background-color: $action_background;
-//     color: $secondary_font_color;
-//     font-size: 16px;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     border: none;
-//     border-radius: 4px;
-//     padding: 0px;
-//     cursor: pointer;
-//   }
-// }

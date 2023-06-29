@@ -2,7 +2,6 @@
 .backdrop {
   position: fixed;
   z-index: 2;
-  max-width: $max_page_size;
   min-width: $container_size;
   height: 100%;
   top: 0;
