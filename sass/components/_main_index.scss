@@ -7,10 +7,10 @@
       #2f303a66 50%,
       #2f303a66 100%
     ),
-    url("/images/bckgrnd.jpg");
+    url("/images/bckgrnd@1x.jpg");
   background-size: cover;
   background-position: center;
-  padding: 118px 0 118px 0;
+  padding: 109px 0 109px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,13 +36,22 @@
     padding: 0px;
     cursor: pointer;
   }
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     background-image: radial-gradient(
         circle at center,
         #2f303a66 50%,
         #2f303a66 100%
       ),
       url("/images/bckgrnd@2x.jpg");
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: radial-gradient(
+        circle at center,
+        #2f303a66 50%,
+        #2f303a66 100%
+      ),
+      url("/images/bckgrnd@3x.jpg");
+    padding: 197px 0 197px 0;
   }
 }
 .main-section {
@@ -60,7 +69,7 @@
   }
 }
 .only-pc-screen {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
 }
@@ -211,7 +220,6 @@
 }
 .clients-section {
   min-width: $container_size;
-  margin: 0;
   padding-bottom: 60px;
 }
 .clients-grid {
@@ -230,6 +238,16 @@
     align-items: center;
     border: 1px solid #afb1b8;
     border-radius: 4px;
+  }
+  @media screen and (min-width: 768px) {
+    &__logo {
+      min-width: calc($container_size / 2 - 2 * 8px);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__logo {
+      min-width: calc($container_size / 2 - 2 * 36px);
+    }
   }
   & svg {
     width: 106px;
