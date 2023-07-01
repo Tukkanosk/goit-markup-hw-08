@@ -165,13 +165,16 @@
 }
 .main-section__crew {
   min-width: $container_size;
-  width: 100%;
   background: #f5f4fa;
-  display: block;
   padding: 0 0 92px 0;
+  @media screen and (min-width: 768px) {
+    min-width: $container_size__t;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: $container_size__pc;
+  }
 }
 .crew-grid {
-  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -184,52 +187,53 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    width: 100%;
     max-width: $container_size;
     @media screen and (min-width: 768px) {
-      max-width: $container_size__t;
+      max-width: calc($container_size__t / 2 - 2 * 15px);
     }
     @media screen and (min-width: 1200px) {
-      max-width: $container_size__pc;
+      max-width: 270px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    &__wrapper {
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    &__occupation {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #757575;
     }
   }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  &__wrapper {
-    padding-bottom: 30px;
+  &__SM {
     display: flex;
     justify-content: center;
-  }
-  &__occupation {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #757575;
-  }
-}
-&__SM {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 44px;
-  width: 44px;
-  & svg {
-    fill: #afb1b8;
-  }
-  &:hover,
-  &:active {
-    background-color: #2196f3;
-    border-radius: 50%;
-  }
-  &:hover svg,
-  &:active svg {
-    fill: #fff;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    & svg {
+      fill: #afb1b8;
+    }
+    &:hover,
+    &:active {
+      background-color: #2196f3;
+      border-radius: 50%;
+    }
+    &:hover svg,
+    &:active svg {
+      fill: #fff;
+    }
   }
 }
-
 .clients-section {
   min-width: $container_size;
   padding-bottom: 60px;
