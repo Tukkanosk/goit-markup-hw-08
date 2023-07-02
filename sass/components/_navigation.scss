@@ -32,69 +32,70 @@
     }
   }
   .menu-grid {
-    display: none;
-    @media screen and (min-width: 481px) {
-      display: flex;
-      flex-direction: row;
-      gap: 32px;
-      padding-left: 0;
-      list-style: none;
-      &__item {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        &:visited {
-          color: inherit;
-        }
-        &:hover,
-        &:focus {
-          color: $action_color;
-        }
-      }
-      &__item__active {
-        position: relative;
-      }
-      &__item__active::after {
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: $action_background;
-        border-radius: 2px;
-        content: "";
-        bottom: -33px;
-        left: 0px;
-      }
-    }
-  }
-  .menu-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-right: 15px;
-    .contact {
-      text-decoration: none;
-      color: #757575;
-      &:hover {
-        color: $action_color;
-      }
-      & svg {
-        fill: $secondary_svg_color;
-      }
-      & svg:hover {
-        fill: $action_color;
-      }
-    }
-    @media screen and (max-width: 480px) {
+    @media screen and (min-width: 320px) and (max-width: 480px) {
       display: none;
     }
-    @media screen and (min-width: 1200px) {
-      flex-direction: row;
-      gap: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding-left: 0;
+    list-style: none;
+    &__item {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }
+      &:hover,
+      &:focus {
+        color: $action_color;
+      }
+    }
+    &__item__active {
+      position: relative;
+    }
+    &__item__active::after {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $action_background;
+      border-radius: 2px;
+      content: "";
+      bottom: -33px;
+      left: 0px;
     }
   }
 }
+.menu-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 15px;
+  .contact {
+    text-decoration: none;
+    color: #757575;
+    &:hover {
+      color: $action_color;
+    }
+    & svg {
+      fill: $secondary_svg_color;
+    }
+    & svg:hover {
+      fill: $action_color;
+    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
 .menu-container {
   position: fixed;
   min-width: $container_size;

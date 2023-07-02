@@ -7,7 +7,7 @@
       #2f303a66 50%,
       #2f303a66 100%
     ),
-    url("/images/bckgrnd@1x.jpg");
+    url("../images/bckgrnd@1x.jpg");
   background-size: cover;
   background-position: center;
   padding: 109px 0 109px 0;
@@ -42,7 +42,7 @@
         #2f303a66 50%,
         #2f303a66 100%
       ),
-      url("/images/bckgrnd@2x.jpg");
+      url("../images/bckgrnd@2x.jpg");
   }
   @media screen and (min-width: 1200px) {
     background-image: radial-gradient(
@@ -50,7 +50,7 @@
         #2f303a66 50%,
         #2f303a66 100%
       ),
-      url("/images/bckgrnd@3x.jpg");
+      url("../images/bckgrnd@3x.jpg");
     padding: 197px 0 197px 0;
   }
 }
