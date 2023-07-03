@@ -11,7 +11,7 @@ body {
 }
 /*Układ stron*/
 .main-page {
-  min-width: $container_size;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -22,7 +22,7 @@ body {
 /*Styl stopki*/
 .f-page {
   background-color: $f-background;
-  min-width: $container_size;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -30,21 +30,21 @@ body {
   padding-bottom: 60px;
 }
 .f-container {
-  min-width: $container_size;
+  width: 100%;
   margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  @media screen and (min-width: 768px) {
-    min-width: $container_size__t;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: $container_size__t;
     flex-wrap: wrap;
     flex-direction: unset;
     justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
-    min-width: $container_size__pc;
+    max-width: $container_size__pc;
     justify-content: space-between;
     align-items: center;
   }
