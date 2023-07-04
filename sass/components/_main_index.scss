@@ -36,7 +36,7 @@
     padding: 0px;
     cursor: pointer;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     background-image: radial-gradient(
         circle at center,
         #2f303a66 50%,
@@ -65,7 +65,7 @@
   }
   @media screen and (min-width: 768px) {
     min-width: calc($container_size__t - 2 * 15px);
-    max-width: 100vp;
+    max-width: 100%;
   }
 }
 .only-pc-screen {
@@ -76,7 +76,6 @@
 .main-grid {
   padding: 60px 0 60px 15px;
   margin: auto;
-  width: 100vp;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -88,7 +87,7 @@
   justify-content: center;
   gap: 30px;
   &__frame {
-    max-width: calc($container_size - 2 * 15px);
+    min-width: calc($container_size - 2 * 15px);
     height: 120px;
     background: #f5f4fa;
     border-radius: 4px;
@@ -109,7 +108,8 @@
   &__header {
     text-align: center;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: $container_size__t;
     display: flex;
     flex-wrap: wrap;
     flex-direction: unset;
@@ -167,7 +167,7 @@
   min-width: $container_size;
   background: #f5f4fa;
   padding: 0 0 92px 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     min-width: $container_size__t;
   }
   @media screen and (min-width: 1200px) {
@@ -188,7 +188,6 @@
     border-radius: 0px 0px 4px 4px;
     text-align: center;
     width: 100%;
-    max-width: $container_size;
     @media screen and (min-width: 768px) {
       max-width: calc($container_size__t / 2 - 2 * 15px);
     }
@@ -235,7 +234,7 @@
   }
 }
 .clients-section {
-  min-width: $container_size;
+  width: 100%;
   padding-bottom: 60px;
 }
 .clients-grid {
@@ -244,10 +243,10 @@
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
-  min-width: calc($container_size - 2 * 15px);
+  min-width: calc(100% - 2 * 15px);
   gap: 30px;
   &__logo {
-    min-width: calc($container_size / 2 - 2 * 16px);
+    min-width: calc(100% / 2 - 2 * 16px);
     height: 92px;
     display: flex;
     justify-content: center;

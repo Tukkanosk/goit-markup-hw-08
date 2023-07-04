@@ -74,6 +74,9 @@
   flex-direction: column;
   gap: 10px;
   padding-right: 15px;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    display: none;
+  }
   .contact {
     text-decoration: none;
     color: #757575;
@@ -87,13 +90,9 @@
       fill: $action_color;
     }
   }
-
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     gap: 50px;
-  }
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    display: none;
   }
 }
 
