@@ -16,7 +16,7 @@
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  min-width: $container_size;
+  width: 100%;
   &-header {
     margin: 0px;
     width: 365px;
@@ -55,7 +55,9 @@
   }
 }
 .main-section {
+  width: auto;
   &__header {
+    width: 100%;
     font-size: 36px;
     font-weight: 700;
     line-height: 42px;
@@ -86,8 +88,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+  width: 100%;
   &__frame {
-    min-width: calc($container_size - 2 * 15px);
+    min-width: calc(100% - 2 * 15px);
     height: 120px;
     background: #f5f4fa;
     border-radius: 4px;
@@ -118,7 +121,7 @@
     }
     &__frame,
     &__wrapper {
-      max-width: calc($container_size__t / 2 - 2 * 15px);
+      min-width: calc(100% / 2 - 2 * 15px);
     }
   }
   @media screen and (min-width: 1200px) {
