@@ -17,7 +17,8 @@
 .menu-page__list {
   padding-right: 15px;
 }
-.menu-page .menu-logo {
+
+.menu-logo {
   padding-left: 15px;
   font-family: "Raleway", sans-serif;
   color: #212121;
@@ -27,39 +28,40 @@
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.menu-page .menu-logo:inherit {
+.menu-logo:inherit {
   color: inherit;
 }
-.menu-page .menu-logo:hover, .menu-page .menu-logo:focus {
+.menu-logo:hover, .menu-logo:focus {
   color: #2196f3;
 }
-.menu-page .menu-logo__effect {
+.menu-logo__effect {
   color: #2196f3;
 }
-.menu-page .menu-grid {
+
+.menu-grid {
   display: flex;
   flex-direction: row;
   gap: 32px;
   padding-left: 0;
   list-style: none;
 }
-.menu-page .menu-grid__item {
+.menu-grid__item {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.menu-page .menu-grid__item:visited {
+.menu-grid__item:visited {
   color: inherit;
 }
-.menu-page .menu-grid__item:hover, .menu-page .menu-grid__item:focus {
+.menu-grid__item:hover, .menu-grid__item:focus {
   color: #2196f3;
 }
-.menu-page .menu-grid__item__active {
+.menu-grid__item__active {
   position: relative;
 }
-.menu-page .menu-grid__item__active::after {
+.menu-grid__item__active::after {
   position: absolute;
   width: 100%;
   height: 3px;
@@ -70,7 +72,7 @@
   left: 0px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .menu-page .menu-grid {
+  .menu-grid {
     display: none;
   }
 }
@@ -80,6 +82,11 @@
   flex-direction: column;
   gap: 10px;
   padding-right: 15px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .menu-contact {
+    display: none;
+  }
 }
 .menu-contact .contact {
   text-decoration: none;
@@ -94,11 +101,6 @@
 .menu-contact .contact svg:hover {
   fill: #2196f3;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .menu-contact {
-    display: none;
-  }
-}
 @media screen and (min-width: 1200px) {
   .menu-contact {
     flex-direction: row;
@@ -110,7 +112,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  height: 796px;
+  height: auto;
   padding: 0 40px 0 40px;
   background-color: #fff;
   z-index: 999;
@@ -274,7 +276,7 @@
 }
 
 .main-section {
-  width: auto;
+  width: 100%;
 }
 .main-section__header {
   width: 100%;
@@ -899,8 +901,7 @@ body {
   align-items: center;
   padding-bottom: 60px;
 }
-
-.f-container {
+.f-page .f-container {
   width: 100%;
   margin: 0px;
   display: flex;
@@ -909,7 +910,7 @@ body {
   gap: 60px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .f-container {
+  .f-page .f-container {
     max-width: 768px;
     flex-wrap: wrap;
     flex-direction: unset;
@@ -917,14 +918,13 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .f-container {
+  .f-page .f-container {
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
   }
 }
-
-.f-grid {
+.f-page .f-grid {
   padding: 60px 0 0 0;
   margin: 0px;
   display: flex;
@@ -934,11 +934,11 @@ body {
   list-style: none;
 }
 @media screen and (min-width: 1200px) {
-  .f-grid {
+  .f-page .f-grid {
     align-items: normal;
   }
 }
-.f-grid__logo {
+.f-page .f-grid__logo {
   font-family: "Raleway", sans-serif;
   color: #fff;
   font-size: 26px;
@@ -947,14 +947,14 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.f-grid__logo__effect {
+.f-page .f-grid__logo__effect {
   color: #2196f3;
   text-decoration: none;
 }
-.f-grid__logo:hover {
+.f-page .f-grid__logo:hover {
   color: #2196f3;
 }
-.f-grid__location {
+.f-page .f-grid__location {
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -963,35 +963,34 @@ body {
   text-align: left;
   color: #fff;
 }
-.f-grid__contact {
+.f-page .f-grid__contact {
   text-decoration: none;
   color: #757575;
 }
-
-.f-section__socials {
+.f-page .f-section__socials {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 @media screen and (min-width: 1200px) {
-  .f-section__socials {
+  .f-page .f-section__socials {
     align-items: normal;
   }
 }
-.f-section__socials .f-socials__header {
+.f-page .f-section__socials .f-socials__header {
   color: #fff;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.f-section__socials .f-socials__box {
+.f-page .f-section__socials .f-socials__box {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.f-section__socials .f-socials__box__item {
+.f-page .f-section__socials .f-socials__box__item {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 44px;
@@ -1000,10 +999,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.f-section__socials .f-socials__box__item svg {
+.f-page .f-section__socials .f-socials__box__item svg {
   fill: #fff;
 }
-.f-section__socials .f-socials__box__item:hover, .f-section__socials .f-socials__box__item:active {
+.f-page .f-section__socials .f-socials__box__item:hover, .f-page .f-section__socials .f-socials__box__item:active {
   background-color: #2196f3;
   border-radius: 50%;
 }

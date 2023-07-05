@@ -337,7 +337,7 @@
 @media screen and (min-width: 768px) {
   .main-section {
     min-width: 738px;
-    max-width: 100vp;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 1199px) {
