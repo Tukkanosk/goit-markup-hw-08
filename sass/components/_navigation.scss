@@ -63,7 +63,7 @@
     border-radius: 2px;
     content: "";
     bottom: -33px;
-    left: 0px;
+    left: 0;
   }
   @media screen and (min-width: 320px) and (max-width: 480px) {
     display: none;
@@ -157,7 +157,7 @@
     letter-spacing: 0.02em;
     color: #2196f3;
     text-decoration: none;
-    &.mail {
+    &__mail {
       font-size: 24px;
       line-height: 28px;
       color: #757575;

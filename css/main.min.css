@@ -1056,7 +1056,6 @@ body {
   margin: 0;
 }
 .main-page {
-  min-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

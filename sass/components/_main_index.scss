@@ -18,7 +18,7 @@
   gap: 30px;
   width: 100%;
   &-header {
-    margin: 0px;
+    margin: 0;
     width: 365px;
     font-family: $default_font_family;
     font-weight: 900;
@@ -30,10 +30,10 @@
     background-color: $action_background;
     color: $secondary_font_color;
     font-size: 16px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
-    padding: 0px;
+    padding: 0;
     cursor: pointer;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -88,7 +88,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  width: 100%;
   &__frame {
     min-width: calc(100% - 2 * 15px);
     height: 120px;
@@ -186,9 +185,9 @@
   justify-content: center;
   &__frame {
     background: #fff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
     text-align: center;
     width: 100%;
     @media screen and (min-width: 768px) {
