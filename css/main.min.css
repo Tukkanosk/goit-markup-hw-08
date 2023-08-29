@@ -1,7 +1,6 @@
 .menu-page {
   border: 1px solid #ececec;
   height: 80px;
-  min-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,7 +282,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 30px;
-  min-width: 480px;
+  min-width: 100%;
 }
 .banner-header {
   margin: 0px;
@@ -505,8 +504,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
-  width: 100%;
-  max-width: 480px;
 }
 @media screen and (min-width: 768px) {
   .crew-grid__frame {
@@ -519,7 +516,6 @@
   }
 }
 .crew-grid__frame img {
-  width: 100%;
   height: auto;
 }
 .crew-grid__frame__wrapper {
@@ -579,7 +575,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 100%;
-  min-width: 450px;
+  min-width: 320px;
   gap: 30px;
 }
 .clients-grid__logo {
