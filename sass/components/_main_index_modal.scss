@@ -18,6 +18,7 @@
   position: absolute;
   z-index: 1;
   width: calc(100% - 2 * 15px);
+  max-width: 450px;
   height: auto;
   top: 50%;
   left: 50%;
@@ -60,19 +61,17 @@
 }
 /*Formularz w oknie modalnym*/
 form {
-  max-width: calc($container_size - 2 * 15px);
+  max-width: 450px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   outline: rgba(33, 33, 33, 0.2);
 }
 .h-form {
   padding: 40px 40px 12px 40px;
   font-family: "Roboto";
   font-style: normal;
-  width: 370px;
   font-size: 20px;
   font-weight: 700;
   line-height: 23px;
@@ -83,12 +82,15 @@ form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 370px;
+  align-items: start;
+  margin: 0 40px 0 40px;
 }
+
 .form-box-input {
   padding: 0 0 0 42px;
-
   height: 40px;
+  width: 90%;
+  max-width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -104,20 +106,22 @@ form {
 
 .form-icon1 {
   top: 131px;
-  left: 11%;
+  padding-left: 14px;
 }
 .form-icon2 {
-  left: 11%;
+  padding-left: 14px;
   top: 204px;
 }
 .form-icon3 {
-  left: 11%;
+  padding-left: 14px;
   top: 276px;
 }
 
 .form-box textarea {
   padding: 0 0 0 15px;
   height: 120px;
+  width: 98%;
+  max-width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;

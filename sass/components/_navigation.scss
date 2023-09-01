@@ -64,7 +64,7 @@
     bottom: -33px;
     left: 0;
   }
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
@@ -116,7 +116,7 @@
     justify-content: flex-end;
     padding: 20px 40px 0 20px;
   }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -195,7 +195,7 @@
   border: none;
   outline: none;
   color: $default_font_color;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
   &:hover svg,
