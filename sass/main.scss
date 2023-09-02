@@ -21,18 +21,22 @@ body {
 .f-page {
   background-color: $f-background;
   height: auto;
+  min-width: 450px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
 }
 
 .f-container {
   margin: 0;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  min-width: 450px;
+  max-width: 100%;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: $container_size__t;
     flex-wrap: wrap;
@@ -44,6 +48,7 @@ body {
     max-width: $container_size__pc;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 }
 .f-grid {
@@ -168,6 +173,9 @@ body {
     background-color: $f-background;
     min-width: calc($container_size - 2 * 15px);
     height: 50px;
+    @media screen and (min-width: 1200px) {
+      min-width: 358px;
+    }
   }
   .f-form__button {
     padding: 10px 0 10px 0;
