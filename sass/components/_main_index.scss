@@ -72,7 +72,7 @@
     max-width: 100%;
   }
   @media screen and (min-width: 1200px) {
-    min-width: calc($container_size__pc - 2 * 15px);
+    max-width: calc($container_size__pc - 2 * 15px);
   }
 }
 .only-pc-screen {
@@ -165,6 +165,7 @@
   margin: 0px;
   padding: 0px;
   list-style: none;
+  max-width: calc($container_size__pc - 2 * 15px);
   &__wall p {
     background: rgba(47, 48, 58, 0.8);
     color: #fff;
