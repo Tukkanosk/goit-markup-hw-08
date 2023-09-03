@@ -7,7 +7,7 @@
       #2f303a66 50%,
       #2f303a66 100%
     ),
-    url("../images/bckgrnd@1x.jpg");
+    url("../images/bckgrnd_tel_1x.jpg");
   background-size: cover;
   background-position: center;
   padding: 109px 0 109px 0;
@@ -38,22 +38,38 @@
     padding: 0;
     cursor: pointer;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    background-image: radial-gradient(
-        circle at center,
-        #2f303a66 50%,
-        #2f303a66 100%
-      ),
-      url("../images/bckgrnd@2x.jpg");
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/bckgrnd_tel_2x.jpg"),
+      radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
   }
-  @media screen and (min-width: 1200px) {
+  @include tablet {
     background-image: radial-gradient(
         circle at center,
         #2f303a66 50%,
         #2f303a66 100%
       ),
-      url("../images/bckgrnd@3x.jpg");
-    padding: 197px 0 197px 0;
+      url("../images/bckgrnd_tab_1x.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/bckgrnd_tab_2x.jpg"),
+      radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
+  }
+  @include desktop {
+    background-image: url("../images/bckgrnd_pc_1x.jpg"),
+      radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/bckgrnd_pc_2x.jpg"),
+      radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
   }
 }
 .main-section {
