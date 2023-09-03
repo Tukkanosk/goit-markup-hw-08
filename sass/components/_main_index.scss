@@ -185,8 +185,7 @@
 .main-section__crew {
   background: #f5f4fa;
   padding: 0 0 92px 0;
-  min-width: 450px;
-  max-width: 100%;
+  min-width: $container_size;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     min-width: $container_size__t;
     display: flex;
@@ -207,6 +206,7 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  min-width: 450px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: $container_size__t;
   }
@@ -220,12 +220,13 @@
     border-radius: 0 0 4px 4px;
     text-align: center;
     min-width: 450px;
-    max-width: 100%;
-    @media screen and (min-width: 768px) {
+    max-width: 90%;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       min-width: calc($container_size__t / 2 - 2 * 15px);
     }
     @media screen and (min-width: 1200px) {
-      min-width: 270px;
+      min-width: unset;
+      max-width: 270px;
     }
 
     img {
@@ -267,7 +268,7 @@
   }
 }
 .clients-section {
-  min-width: 450px;
+  min-width: 480px;
   max-width: 100%;
   padding-bottom: 60px;
   @media screen and (min-width: 768px) {
@@ -296,7 +297,7 @@
   }
   &__logo {
     min-width: 208px;
-    height: 92px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
