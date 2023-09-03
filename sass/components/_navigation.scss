@@ -135,6 +135,7 @@
     line-height: 47px;
     letter-spacing: 0.02em;
     text-decoration: none;
+
     &:visited {
       color: inherit;
     }
@@ -142,6 +143,14 @@
     &:focus {
       color: $action_color;
     }
+  }
+  &__item__active {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $action_color;
   }
 }
 .mobile-contact {
@@ -162,6 +171,7 @@
       font-size: 24px;
       line-height: 28px;
       color: #757575;
+      text-decoration: unset;
     }
   }
   &__socials {
