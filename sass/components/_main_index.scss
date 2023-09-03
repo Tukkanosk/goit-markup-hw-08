@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 .banner {
   text-align: center;
   color: #ffffff;
@@ -10,14 +11,15 @@
     url("../images/bckgrnd_tel_1x.jpg");
   background-size: cover;
   background-position: center;
-  padding: 109px 0 109px 0;
+  padding: 200px 0 200px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
   min-width: 450px;
-  max-width: 100%;
+
   &-header {
     margin: 0;
     min-width: 75%;
@@ -58,6 +60,7 @@
     background-image: url("../images/bckgrnd_tab_2x.jpg"),
       radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
   }
+
   @include desktop {
     background-image: url("../images/bckgrnd_pc_1x.jpg"),
       radial-gradient(circle at center, #2f303a66 50%, #2f303a66 100%);
